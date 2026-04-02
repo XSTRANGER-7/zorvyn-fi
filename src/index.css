@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Outfit', sans-serif;
+  --color-finance-dark: #08060d;
+  --color-finance-card: #16171d;
+  --color-finance-border: #2e303a;
+  --color-finance-accent: #aa3bff;
+  --color-finance-accentDark: #c084fc;
+  --color-finance-textMuted: #9ca3af;
+  --color-finance-textMain: #f3f4f6;
+}
+
+@layer base {
+  body {
+    @apply bg-finance-dark text-finance-textMain antialiased font-sans;
+  }
+  
+  #root {
+    @apply min-h-screen flex flex-col;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-finance-card/80 backdrop-blur-md border border-finance-border shadow-lg;
+  }
+  
+  .text-glow {
+    text-shadow: 0 0 20px rgba(170, 59, 255, 0.4);
+  }
+}
+
+/* Custom Scrollbar for a premium feel */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2e303a;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #aa3bff;
+}
