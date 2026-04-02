@@ -2,16 +2,31 @@
 
 @theme {
   --font-sans: 'Outfit', sans-serif;
-  --color-finance-dark: #08060d;
-  --color-finance-card: #16171d;
-  --color-finance-border: #2e303a;
+  --color-finance-dark: var(--finance-dark);
+  --color-finance-card: var(--finance-card);
+  --color-finance-border: var(--finance-border);
   --color-finance-accent: #aa3bff;
   --color-finance-accentDark: #c084fc;
-  --color-finance-textMuted: #9ca3af;
-  --color-finance-textMain: #f3f4f6;
+  --color-finance-textMuted: var(--finance-text-muted);
+  --color-finance-textMain: var(--finance-text-main);
 }
 
 @layer base {
+  :root {
+    --finance-dark: #f8fafc; /* light bg */
+    --finance-card: #ffffff;
+    --finance-border: #e2e8f0;
+    --finance-text-muted: #64748b;
+    --finance-text-main: #0f172a;
+  }
+  .dark {
+    --finance-dark: #08060d;
+    --finance-card: #16171d;
+    --finance-border: #2e303a;
+    --finance-text-muted: #9ca3af;
+    --finance-text-main: #f3f4f6;
+  }
+
   body {
     @apply bg-finance-dark text-finance-textMain antialiased font-sans;
   }
