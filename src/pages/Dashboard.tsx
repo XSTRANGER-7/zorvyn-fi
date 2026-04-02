@@ -4,7 +4,7 @@ import { BalanceChart } from '../components/charts/BalanceChart';
 import { CategoryChart } from '../components/charts/CategoryChart';
 import { formatCurrency } from '../utils/helpers';
 import { useTransactionStore } from '../store/useTransactionStore';
-import { ArrowUpRight, ArrowDownRight, DollarSign } from 'lucide-react';
+import { ArrowUpRight, ArrowDownRight, DollarSign } from 'lucide-react'; 
 
 export function Dashboard() {
   const { transactions } = useTransactionStore();
@@ -77,5 +77,6 @@ export function Dashboard() {
         </Card>
       </div>
     </div>
+ 
   );
 }
