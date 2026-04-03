@@ -9,10 +9,7 @@
     <style>
       #splash-screen {
         position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
+        inset: 0;
         background-color: #08060d;
         display: flex;
         flex-direction: column;
@@ -94,6 +91,23 @@
       }
       @keyframes fade-in-slide-text {
         100% { opacity: 1; transform: translateX(0); }
+      }
+
+      /* Mobile Responsiveness for Splash Screen */
+      @media (max-width: 768px) {
+        .logo-wrapper {
+          width: 45px;
+          height: 45px;
+          transform: translateX(50px) scale(1.4);
+        }
+        .splash-text-part {
+          font-size: 2.2rem;
+          transform: translateX(-25px);
+          top: 1px;
+        }
+        @keyframes logo-shrink-move {
+          100% { transform: translate(0, 3px) scale(1); }
+        }
       }
     </style>
   </head>

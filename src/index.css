@@ -29,6 +29,7 @@
 
   body {
     @apply bg-finance-dark text-finance-textMain antialiased font-sans;
+    overflow-x: hidden;
   }
   
   #root {

@@ -25,7 +25,7 @@ export function Dashboard() {
   }, [transactions]);
 
   return (
-    <div className="space-y-8">
+    <div className="space-y-6 md:space-y-8">
       <header>
         <h1 className="text-3xl font-bold mb-2">Overview</h1>
         <p className="text-finance-textMuted">Welcome back, here's your financial snapshot.</p>

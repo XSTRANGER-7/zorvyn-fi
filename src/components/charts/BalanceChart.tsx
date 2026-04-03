@@ -2,7 +2,7 @@ import { useMemo, useState, useEffect } from 'react';
 import { AreaChart, Area, BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid, Cell } from 'recharts';
 import { useTransactionStore } from '../../store/useTransactionStore';
 import { formatCurrency, cn } from '../../utils/helpers';
-import { format, parseISO, startOfMonth, endOfMonth, eachDayOfInterval, isBefore, isSameDay } from 'date-fns';
+import { format, parseISO, endOfMonth, eachDayOfInterval, isBefore, isSameDay } from 'date-fns';
 import { BarChart3, TrendingUp } from 'lucide-react';
 
 export function BalanceChart() {
@@ -109,7 +109,7 @@ export function BalanceChart() {
       </div>
 
       {/* Chart Canvas */}
-      <div className="h-72 w-full mt-2">
+      <div className="h-64 sm:h-72 w-full mt-2">
         <ResponsiveContainer width="100%" height="100%">
           {chartType === 'area' ? (
             <AreaChart data={data} margin={{ top: 10, right: 0, left: -20, bottom: 0 }}>
