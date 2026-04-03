@@ -70,7 +70,7 @@ export function Dashboard() {
 
       {/* Quick Links Section */}
       <Card className="p-4 lg:p-6">
-        <div className="flex justify-between items-center overflow-x-auto gap-6 hide-scrollbar">
+        <div className="grid grid-cols-3 lg:grid-cols-6 gap-y-6 gap-x-2 md:gap-x-6 w-full">
           {[
             { icon: CreditCard, label: 'Debit Card' },
             { icon: WalletCards, label: 'Credit Card' },
@@ -81,7 +81,7 @@ export function Dashboard() {
           ].map((service, idx) => (
             <button 
               key={idx} 
-              className="flex flex-col items-center justify-center gap-3 min-w-[80px] group focus:outline-none"
+              className="flex flex-col items-center justify-center gap-3 group focus:outline-none w-full"
             >
               <div className="w-12 h-12 rounded-full bg-finance-dark border border-finance-border flex items-center justify-center text-finance-textMuted group-hover:border-finance-accent group-hover:text-finance-accent shadow-sm group-hover:shadow-[0_0_15px_rgba(234,179,8,0.2)] transition-all duration-300">
                 <service.icon size={22} />
