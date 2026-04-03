@@ -4,7 +4,7 @@ import { BalanceChart } from '../components/charts/BalanceChart';
 import { CategoryChart } from '../components/charts/CategoryChart';
 import { formatCurrency } from '../utils/helpers';
 import { useTransactionStore } from '../store/useTransactionStore';
-import { ArrowUpRight, ArrowDownRight, Eye, EyeOff } from 'lucide-react'; 
+import { ArrowUpRight, ArrowDownRight, Eye, EyeOff, CreditCard, WalletCards, Landmark, TrendingUp, Percent, Briefcase } from 'lucide-react'; 
 
 export function Dashboard() {
   const { transactions } = useTransactionStore();
@@ -67,6 +67,32 @@ export function Dashboard() {
           <p className="text-2xl font-bold">{formatCurrency(stats.expense)}</p>
         </Card>
       </div>
+
+      {/* Quick Links Section */}
+      <Card className="p-4 lg:p-6">
+        <div className="flex justify-between items-center overflow-x-auto gap-6 hide-scrollbar">
+          {[
+            { icon: CreditCard, label: 'Debit Card' },
+            { icon: WalletCards, label: 'Credit Card' },
+            { icon: Landmark, label: 'Fixed Deposits' },
+            { icon: TrendingUp, label: 'Mutual Funds' },
+            { icon: Percent, label: 'Loans' },
+            { icon: Briefcase, label: 'SIP' },
+          ].map((service, idx) => (
+            <button 
+              key={idx} 
+              className="flex flex-col items-center justify-center gap-3 min-w-[80px] group focus:outline-none"
+            >
+              <div className="w-12 h-12 rounded-full bg-finance-dark border border-finance-border flex items-center justify-center text-finance-textMuted group-hover:border-finance-accent group-hover:text-finance-accent shadow-sm group-hover:shadow-[0_0_15px_rgba(234,179,8,0.2)] transition-all duration-300">
+                <service.icon size={22} />
+              </div>
+              <span className="text-xs font-medium text-finance-textMuted group-hover:text-finance-textMain transition-colors whitespace-nowrap">
+                {service.label}
+              </span>
+            </button>
+          ))}
+        </div>
+      </Card>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         {/* Main Chart */}

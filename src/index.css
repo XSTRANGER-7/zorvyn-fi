@@ -44,6 +44,14 @@
   .text-glow {
     text-shadow: 0 0 20px rgba(234, 179, 8, 0.4);
   }
+
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 /* Custom Scrollbar for a premium feel */
