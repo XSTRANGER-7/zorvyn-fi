@@ -1,25 +1,15 @@
+import { useState } from 'react';
 import { Card } from '../components/ui/Card';
 import { TransactionTable } from '../components/table/TransactionTable';
 import { Button } from '../components/ui/Button';
 import { Plus } from 'lucide-react';
 import { useAuthStore } from '../store/useAuthStore';
-import { useTransactionStore } from '../store/useTransactionStore';
+import { AddTransactionModal } from '../components/modals/AddTransactionModal';
 
 export function Transactions() {
   const { role } = useAuthStore();
-  const { addTransaction } = useTransactionStore();
+  const [isModalOpen, setIsModalOpen] = useState(false);
   
-  // For simplicity, defining mock additions instead of a full form modal.
-  const handleAddMock = () => {
-    addTransaction({
-      description: 'New Transaction ' + Math.floor(Math.random() * 100),
-      amount: Math.floor(Math.random() * 500) + 10,
-      category: ['Groceries', 'Entertainment', 'Dining'][Math.floor(Math.random() * 3)],
-      date: new Date().toISOString(),
-      type: 'expense'
-    });
-  };
-
   return (
     <div className="space-y-8">
       <header className="flex items-end justify-between">
@@ -28,7 +18,7 @@ export function Transactions() {
           <p className="text-finance-textMuted">View, search, and manage your financial activity.</p>
         </div>
         {role === 'admin' && (
-          <Button onClick={handleAddMock} className="gap-2">
+          <Button onClick={() => setIsModalOpen(true)} className="gap-2 shrink-0">
             <Plus size={16} />
             <span className="hidden sm:inline">Add Transaction</span>
           </Button>
@@ -40,6 +30,12 @@ export function Transactions() {
           <TransactionTable />
         </div>
       </Card>
+
+      {/* Admin Specific Action Modal */}
+      <AddTransactionModal 
+        isOpen={isModalOpen} 
+        onClose={() => setIsModalOpen(false)} 
+      />
     </div>
   );
 }

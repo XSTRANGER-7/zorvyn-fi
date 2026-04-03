@@ -10,7 +10,7 @@ export function Card({ className, glow, ...props }: CardProps) {
     <div
       className={cn(
         "rounded-xl glass p-6 transition-all duration-300",
-        glow && "hover:shadow-[0_0_20px_rgba(170,59,255,0.15)] hover:border-finance-accent/50",
+        glow && "hover:shadow-[0_0_20px_rgba(234,179,8,0.15)] hover:border-finance-accent/50",
         className
       )}
       {...props}
