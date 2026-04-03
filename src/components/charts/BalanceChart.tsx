@@ -43,7 +43,7 @@ export function BalanceChart() {
             fontSize={12} 
             tickLine={false} 
             axisLine={false} 
-            tickFormatter={(value) => `$${value}`}
+            tickFormatter={(value) => `₹${value}`}
           />
           <Tooltip 
             contentStyle={{ backgroundColor: '#16171d', borderColor: '#2e303a', borderRadius: '8px' }}

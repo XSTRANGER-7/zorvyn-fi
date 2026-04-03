@@ -1,13 +1,14 @@
-import { useMemo } from 'react';
+import { useMemo, useState } from 'react';
 import { Card } from '../components/ui/Card';
 import { BalanceChart } from '../components/charts/BalanceChart';
 import { CategoryChart } from '../components/charts/CategoryChart';
 import { formatCurrency } from '../utils/helpers';
 import { useTransactionStore } from '../store/useTransactionStore';
-import { ArrowUpRight, ArrowDownRight, DollarSign } from 'lucide-react'; 
+import { ArrowUpRight, ArrowDownRight, Eye, EyeOff } from 'lucide-react'; 
 
 export function Dashboard() {
   const { transactions } = useTransactionStore();
+  const [showBalance, setShowBalance] = useState(true);
 
   const stats = useMemo(() => {
     let income = 0;
@@ -35,9 +36,15 @@ export function Dashboard() {
         <Card glow className="bg-gradient-to-br from-finance-card to-finance-card/50">
           <div className="flex justify-between items-start text-finance-textMuted mb-4">
             <h3 className="font-medium">Total Balance</h3>
-            <DollarSign size={20} className="text-finance-accent" />
+            <button 
+              onClick={() => setShowBalance(!showBalance)} 
+              className="text-finance-accent hover:text-finance-accentDark transition-colors cursor-pointer"
+              aria-label={showBalance ? "Hide balance" : "Show balance"}
+            >
+              {showBalance ? <Eye size={20} /> : <EyeOff size={20} />}
+            </button>
           </div>
-          <p className="text-4xl font-bold">{formatCurrency(stats.balance)}</p>
+          <p className="text-4xl font-bold">{showBalance ? formatCurrency(stats.balance) : '****'}</p>
         </Card>
         
         <Card glow>
