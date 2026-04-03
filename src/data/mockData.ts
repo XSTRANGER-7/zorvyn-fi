@@ -22,7 +22,7 @@ export const CATEGORY_COLORS: Record<string, string> = {
   'Salary': '#22c55e',
   'Freelance': '#10b981',
   'Groceries': '#f59e0b',
-  'Entertainment': '#aa3bff',
+  'Entertainment': '#eab308',
   'Utilities': '#3b82f6',
   'Dining': '#f43f5e',
   'Subscriptions': '#8b5cf6',

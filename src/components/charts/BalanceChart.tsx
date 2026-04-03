@@ -27,8 +27,8 @@ export function BalanceChart() {
         <AreaChart data={data}>
           <defs>
             <linearGradient id="colorBalance" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="5%" stopColor="#aa3bff" stopOpacity={0.3} />
-              <stop offset="95%" stopColor="#aa3bff" stopOpacity={0} />
+              <stop offset="5%" stopColor="#eab308" stopOpacity={0.3} />
+              <stop offset="95%" stopColor="#eab308" stopOpacity={0} />
             </linearGradient>
           </defs>
           <XAxis 
@@ -47,13 +47,13 @@ export function BalanceChart() {
           />
           <Tooltip 
             contentStyle={{ backgroundColor: '#16171d', borderColor: '#2e303a', borderRadius: '8px' }}
-            itemStyle={{ color: '#c084fc' }}
+            itemStyle={{ color: '#fcd34d' }}
             formatter={(value: any) => [formatCurrency(Number(value)), 'Balance']}
           />
           <Area 
             type="monotone" 
             dataKey="balance" 
-            stroke="#aa3bff" 
+            stroke="#eab308" 
             strokeWidth={3}
             fillOpacity={1} 
             fill="url(#colorBalance)" 

@@ -24,7 +24,7 @@ export function Sidebar() {
               cn(
                 "flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium transition-all duration-300",
                 isActive 
-                  ? "bg-finance-accent/10 text-finance-accentDark shadow-[inset_2px_0_0_0_#aa3bff]" 
+                  ? "bg-finance-accent/10 text-finance-accentDark shadow-[inset_2px_0_0_0_#eab308]" 
                   : "text-finance-textMuted hover:bg-finance-card hover:text-finance-textMain"
               )
             }

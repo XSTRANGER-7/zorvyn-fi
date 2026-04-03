@@ -8,7 +8,7 @@ export function Footer() {
         
         <div className="flex flex-col items-center md:items-start max-w-sm">
           <div className="flex items-center gap-3 mb-4">
-             <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-finance-accent to-finance-accentDark flex items-center justify-center text-white font-bold text-xl shadow-[0_0_15px_rgba(170,59,255,0.4)]">
+             <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-finance-accent to-finance-accentDark flex items-center justify-center text-white font-bold text-xl shadow-[0_0_15px_rgba(234,179,8,0.4)]">
                Z
              </div>
              <span className="text-2xl font-bold tracking-wider text-finance-textMain">Zorvynfi</span>
