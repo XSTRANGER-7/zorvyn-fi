@@ -1,7 +1,7 @@
 import { Outlet } from 'react-router-dom';
 import { Navbar } from './Navbar';
 import { Sidebar } from './Sidebar';
-import { Footer } from './Footer';
+// import { Footer } from './Footer';
 
 export function DashboardLayout() {
   return (
@@ -13,7 +13,7 @@ export function DashboardLayout() {
           <div className="w-full max-w-6xl p-6 lg:p-8 animate-in fade-in slide-in-from-bottom-4 duration-700 flex-1">
             <Outlet />
           </div>
-          <Footer />
+      {/* <Footer /> */}
         </main>
       </div>
     </div>

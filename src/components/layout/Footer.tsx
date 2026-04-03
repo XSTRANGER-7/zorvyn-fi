@@ -1,5 +1,5 @@
 import { ThemeToggle } from './ThemeToggle';
-import { Github, Twitter, Linkedin, ExternalLink } from 'lucide-react';
+import { Mail, Globe, MessageCircle, ExternalLink } from 'lucide-react';
 
 export function Footer() {
   return (
@@ -46,9 +46,9 @@ export function Footer() {
       <div className="max-w-6xl mx-auto w-full mt-12 pt-6 border-t border-finance-border flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-finance-textMuted">
         <p>&copy; {new Date().getFullYear()} Zorvynfi Financial Ltd. All rights reserved.</p>
         <div className="flex gap-5">
-          <a href="#" className="hover:text-finance-textMain transition-colors"><Twitter size={18}/></a>
-          <a href="#" className="hover:text-finance-textMain transition-colors"><Github size={18}/></a>
-          <a href="#" className="hover:text-finance-textMain transition-colors"><Linkedin size={18}/></a>
+          <a href="#" className="hover:text-finance-textMain transition-colors"><MessageCircle size={18}/></a>
+          <a href="#" className="hover:text-finance-textMain transition-colors"><Globe size={18}/></a>
+          <a href="#" className="hover:text-finance-textMain transition-colors"><Mail size={18}/></a>
         </div>
       </div>
     </footer>
