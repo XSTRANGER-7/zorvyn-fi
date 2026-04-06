@@ -5,7 +5,7 @@ import { MobileNav } from './MobileNav';
 
 export function DashboardLayout() {
   return (
-    <div className="min-h-screen bg-finance-dark text-finance-textMain font-sans flex flex-col transition-colors duration-300">
+    <div className="min-h-[100dvh] bg-finance-dark text-finance-textMain font-sans flex flex-col transition-colors duration-300 overflow-x-hidden">
       <Navbar />
       <div className="flex flex-1 pt-16 pb-16 md:pb-0 min-w-0 w-full overflow-hidden">
         <Sidebar />
