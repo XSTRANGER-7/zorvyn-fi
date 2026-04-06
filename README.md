@@ -2,7 +2,7 @@
   <img src="public/favicon.png" alt="ZorvynFi Logo" width="120" />
 </p>
 
-# ZorvynFi Finance Dashboard 💳✨
+# ZorvynFi Finance Dashboard 
 
 > An ultra-premium, highly responsive financial command center engineered for top-tier banking analytics, seamlessly blending data-rich insights with state-of-the-art mobile viewport capabilities.
 
@@ -13,7 +13,7 @@
 ZorvynFi is a modern financial dashboard application designed to completely reinvent personal transaction management. Inspired by the sleekest neo-banking applications (like Kotak 811), it features responsive mobile adaptations, dynamic real-time charting, and a persistent architectural layout that scales perfectly across desktops, tablets, and smartphones.
 
 ### 🔗 Live Links
-- **Live Demo**: [Insert Vercel / Netlify Link Here]
+- **Live Demo**: [[Insert Vercel / Netlify Link Here]](https://zorvyn-fi.vercel.app/)
 - **Repository**: [https://github.com/XSTRANGER-7/zorvyn-fi](https://github.com/XSTRANGER-7/zorvyn-fi)
 
 ---
