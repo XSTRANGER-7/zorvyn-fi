@@ -57,14 +57,14 @@ export function TransactionTable() {
   };
 
   return (
-    <div className="space-y-4">
+    <div className="space-y-4 ">
       
       {/* Top Header Controls */}
-      <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center justify-between print:hidden">
+      <div className="flex flex-col sm:flex-row-reverse gap-4 items-start sm:items-center justify-between print:hidden ">
         
-        {/* Search & Filter Trigger */}
+        {/* Search & Filter Trigger (Right on Desktop) */}
         <div className="flex w-full sm:w-auto items-center gap-2">
-          <div className="relative w-full sm:w-64">
+          <div className="relative w-full sm:w-80 lg:w-96">
             <Search size={18} className="absolute left-3 top-1/2 -translate-y-1/2 text-finance-textMuted" />
             <input 
               type="text" 
@@ -84,14 +84,14 @@ export function TransactionTable() {
           </Button>
         </div>
 
-        {/* Statement Dropdown */}
+        {/* Statement Dropdown (Left on Desktop) */}
         <div className="relative w-full sm:w-auto">
           <Button variant="ghost" onClick={() => setShowStatement(!showStatement)} className="w-full sm:w-auto border border-finance-border text-xs gap-2">
             <FileText size={14} /> My Statement
           </Button>
           
           {showStatement && (
-            <div className="absolute right-0 mt-2 w-full sm:w-48 bg-finance-card border border-finance-border rounded-lg shadow-xl z-50 overflow-hidden animate-in fade-in slide-in-from-top-2">
+            <div className="absolute right-0 sm:left-0 sm:right-auto mt-2 w-full sm:w-48 bg-finance-card border border-finance-border rounded-lg shadow-xl z-50 overflow-hidden animate-in fade-in slide-in-from-top-2">
               <button onClick={() => { handleDownloadCSV(); setShowStatement(false); }} className="w-full text-left px-4 py-3 text-sm hover:bg-finance-dark/50 transition-colors flex items-center gap-2 text-finance-textMain">
                 <Download size={14} /> Download CSV
               </button>
@@ -156,11 +156,11 @@ export function TransactionTable() {
           filteredData.map((t) => (
             <div 
               key={t.id} 
-              className="flex items-center justify-between py-3 sm:py-4 px-1 sm:px-2 border-b border-finance-border/70 last:border-0 hover:bg-finance-card/20 transition-colors group"
+              className="flex items-center justify-between py-4 sm:py-5 px-2 sm:px-4 border-b border-finance-border/70 last:border-0 hover:bg-finance-card/20 transition-colors group rounded-lg"
             >
-              <div className="flex items-center gap-3">
+              <div className="flex items-center gap-4">
                 <div className={cn(
-                  "w-9 h-9 sm:w-10 sm:h-10 rounded-full flex items-center justify-center shrink-0",
+                  "w-10 h-10 sm:w-11 sm:h-11 rounded-full flex items-center justify-center shrink-0",
                   t.type === 'income' ? 'bg-green-500/10 text-green-400' : 'bg-finance-card text-finance-textMuted border border-finance-border'
                 )}>
                   {t.type === 'income' ? <ArrowDownLeft size={18} /> : <ArrowUpRight size={18} />}

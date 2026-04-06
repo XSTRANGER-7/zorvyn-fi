@@ -1,15 +1,13 @@
 import { NavLink } from 'react-router-dom';
-import { LayoutDashboard, ReceiptText, LineChart, KeyRound } from 'lucide-react';
+import { LayoutDashboard, ReceiptText, LineChart, Grid } from 'lucide-react';
 import { cn } from '../../utils/helpers';
-import { useAuthStore } from '../../store/useAuthStore';
 
 export function MobileNav() {
-  const { role, toggleRole } = useAuthStore();
-  
   const links = [
     { to: '/', icon: LayoutDashboard, label: 'Dashboard' },
     { to: '/transactions', icon: ReceiptText, label: 'Transactions' },
     { to: '/insights', icon: LineChart, label: 'Insights' },
+    { to: '/services', icon: Grid, label: 'Services' },
   ];
 
   return (
@@ -31,18 +29,6 @@ export function MobileNav() {
           <span className="text-[10px] font-medium">{link.label}</span>
         </NavLink>
       ))}
-      <button 
-        onClick={toggleRole}
-        className="flex flex-col items-center justify-center w-full h-full gap-1 text-finance-textMuted hover:text-finance-textMain transition-colors active:scale-95"
-      >
-        <div className="relative">
-          <KeyRound size={20} />
-          {role === 'admin' && (
-            <div className="absolute -top-1 -right-1 w-2 h-2 bg-green-500 rounded-full border border-finance-dark shadow-[0_0_5px_rgba(34,197,94,0.5)]" />
-          )}
-        </div>
-        <span className="text-[10px] font-medium capitalize">{role}</span>
-      </button>
     </nav>
   );
 }

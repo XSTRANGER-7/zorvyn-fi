@@ -2,7 +2,7 @@ import { useMemo, useState, useEffect } from 'react';
 import { AreaChart, Area, BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid, Cell } from 'recharts';
 import { useTransactionStore } from '../../store/useTransactionStore';
 import { formatCurrency, cn } from '../../utils/helpers';
-import { format, parseISO, endOfMonth, eachDayOfInterval, isBefore, isSameDay } from 'date-fns';
+import { format, parseISO, endOfMonth, eachDayOfInterval, isBefore, isSameDay, isAfter, endOfDay } from 'date-fns';
 import { BarChart3, TrendingUp } from 'lucide-react';
 
 export function BalanceChart() {
@@ -36,7 +36,10 @@ export function BalanceChart() {
 
     const monthStart = parseISO(`${selectedMonth}-01T00:00:00`);
     const monthEnd = endOfMonth(monthStart);
-    const days = eachDayOfInterval({ start: monthStart, end: monthEnd });
+    let days = eachDayOfInterval({ start: monthStart, end: monthEnd });
+
+    const now = endOfDay(new Date());
+    days = days.filter(day => !isAfter(day, now));
 
     let currentBalance = 0;
     const sortedTxs = [...transactions].sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
