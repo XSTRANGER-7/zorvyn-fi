@@ -156,11 +156,11 @@ export function TransactionTable() {
           filteredData.map((t) => (
             <div 
               key={t.id} 
-              className="flex items-center justify-between py-3 sm:py-4 px-1 sm:px-2 border-b border-finance-border/70 last:border-0 hover:bg-finance-card/20 transition-colors group"
+              className="flex items-center justify-between py-4 sm:py-5 px-2 sm:px-4 border-b border-finance-border/70 last:border-0 hover:bg-finance-card/20 transition-colors group rounded-lg"
             >
-              <div className="flex items-center gap-3">
+              <div className="flex items-center gap-4">
                 <div className={cn(
-                  "w-9 h-9 sm:w-10 sm:h-10 rounded-full flex items-center justify-center shrink-0",
+                  "w-10 h-10 sm:w-11 sm:h-11 rounded-full flex items-center justify-center shrink-0",
                   t.type === 'income' ? 'bg-green-500/10 text-green-400' : 'bg-finance-card text-finance-textMuted border border-finance-border'
                 )}>
                   {t.type === 'income' ? <ArrowDownLeft size={18} /> : <ArrowUpRight size={18} />}

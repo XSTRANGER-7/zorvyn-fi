@@ -13,7 +13,7 @@ export function Transactions() {
   return (
     <div className="space-y-8">
       <header className="flex items-end justify-between">
-        <div>
+        <div className="ml-2 sm:ml-0">
           <h1 className="text-3xl font-bold mb-2">Transactions</h1>
           <p className="text-finance-textMuted">View, search, and manage your financial activity.</p>
         </div>
