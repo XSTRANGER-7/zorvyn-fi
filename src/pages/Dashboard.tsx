@@ -44,7 +44,7 @@ export function Dashboard() {
               {showBalance ? <Eye size={20} /> : <EyeOff size={20} />}
             </button>
           </div>
-          <p className="text-4xl font-bold">{showBalance ? formatCurrency(stats.balance) : '****'}</p>
+          <p className="text-4xl font-bold">{showBalance ? formatCurrency(stats.balance) : '₹ •••••'}</p>
         </Card>
         
         <Card glow>
