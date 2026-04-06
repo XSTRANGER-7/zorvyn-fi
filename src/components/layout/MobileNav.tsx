@@ -11,7 +11,13 @@ export function MobileNav() {
   ];
 
   return (
-    <nav className="fixed bottom-0 left-0 right-0 h-16 border-t border-finance-border bg-finance-dark/95 backdrop-blur-xl md:hidden flex items-center justify-around z-50 px-2 shadow-[0_-10px_30px_rgba(0,0,0,0.5)]">
+    <nav 
+      className="fixed bottom-0 left-0 right-0 border-t border-finance-border bg-finance-dark/95 backdrop-blur-xl md:hidden flex items-center justify-around z-50 px-2 shadow-[0_-10px_30px_rgba(0,0,0,0.5)] pt-1"
+      style={{
+        paddingBottom: 'max(env(safe-area-inset-bottom), 0.5rem)',
+        minHeight: 'calc(4rem + env(safe-area-inset-bottom))'
+      }}
+    >
       {links.map((link) => (
         <NavLink
            key={link.to}
