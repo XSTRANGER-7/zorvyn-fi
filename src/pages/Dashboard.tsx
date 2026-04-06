@@ -1,7 +1,7 @@
 import { useMemo, useState } from 'react';
 import { Card } from '../components/ui/Card';
 import { BalanceChart } from '../components/charts/BalanceChart';
-import { CategoryChart } from '../components/charts/CategoryChart';
+
 import { formatCurrency } from '../utils/helpers';
 import { useTransactionStore } from '../store/useTransactionStore';
 import { ArrowUpRight, ArrowDownRight, Eye, EyeOff, CreditCard, WalletCards, Landmark, TrendingUp, Percent, Briefcase } from 'lucide-react'; 
@@ -94,19 +94,12 @@ export function Dashboard() {
         </div>
       </Card>
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 w-full gap-6">
         {/* Main Chart */}
-        <Card className="lg:col-span-2">
+        <Card className="col-span-1 w-full">
           <h3 className="font-medium mb-1">Balance Trend</h3>
           <p className="text-sm text-finance-textMuted mb-4">Your balance history over time</p>
           <BalanceChart />
-        </Card>
-
-        {/* Side Chart */}
-        <Card>
-          <h3 className="font-medium mb-1">Spending Breakdown</h3>
-          <p className="text-sm text-finance-textMuted mb-4">Categorized expenses</p>
-          <CategoryChart />
         </Card>
       </div>
     </div>
