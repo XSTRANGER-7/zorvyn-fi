@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Card } from '../components/ui/Card';
+
 import { TransactionTable } from '../components/table/TransactionTable';
 import { Button } from '../components/ui/Button';
 import { Plus } from 'lucide-react';
@@ -25,11 +25,9 @@ export function Transactions() {
         )}
       </header>
 
-      <Card className="p-0 sm:p-6 sm:overflow-hidden overflow-x-auto min-h-[400px]">
-        <div className="p-6 sm:p-0">
-          <TransactionTable />
-        </div>
-      </Card>
+      <div className="sm:overflow-hidden overflow-x-auto min-h-[400px]">
+        <TransactionTable />
+      </div>
 
       {/* Admin Specific Action Modal */}
       <AddTransactionModal 

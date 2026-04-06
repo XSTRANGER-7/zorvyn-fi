@@ -57,10 +57,10 @@ export function TransactionTable() {
   };
 
   return (
-    <div className="space-y-4">
+    <div className="space-y-4 ">
       
       {/* Top Header Controls */}
-      <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center justify-between print:hidden">
+      <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center justify-between print:hidden ">
         
         {/* Search & Filter Trigger */}
         <div className="flex w-full sm:w-auto items-center gap-2">
