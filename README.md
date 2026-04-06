@@ -10,7 +10,7 @@
 
 ## 📖 Overview
 
-ZorvynFi is a modern financial dashboard application designed to completely reinvent personal transaction management. Inspired by the sleekest neo-banking applications (like Kotak 811), it features responsive mobile adaptations, dynamic real-time charting, and a persistent architectural layout that scales perfectly across desktops, tablets, and smartphones.
+ZorvynFi is a modern financial dashboard application designed to completely reinvent personal transaction management. Inspired by the sleekest banking applications, it features responsive mobile adaptations, dynamic real-time charting, and a persistent architectural layout that scales perfectly across desktops, tablets, and smartphones.
 
 ### 🔗 Live Links
 - **Live Demo**: https://zorvyn-fi.vercel.app/
