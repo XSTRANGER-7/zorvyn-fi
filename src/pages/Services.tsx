@@ -1,5 +1,5 @@
 import { Card } from '../components/ui/Card';
-import { CreditCard, WalletCards, Landmark, TrendingUp, Percent, Briefcase, Grid } from 'lucide-react';
+import { CreditCard, WalletCards, Landmark, TrendingUp, Percent, Briefcase } from 'lucide-react';
 
 export function Services() {
   return (

@@ -2,7 +2,7 @@ import { useMemo } from 'react';
 import { Card } from '../components/ui/Card';
 import { useTransactionStore } from '../store/useTransactionStore';
 import { formatCurrency } from '../utils/helpers';
-import { AlertTriangle, Zap, CalendarDays, BrainCircuit, Sparkles, PieChart, TrendingUp } from 'lucide-react';
+import { AlertTriangle, Zap, CalendarDays, Sparkles, PieChart, TrendingUp } from 'lucide-react';
 import { CategoryChart } from '../components/charts/CategoryChart';
 import { IncomeExpenseChart } from '../components/charts/IncomeExpenseChart';
 import { format, parseISO } from 'date-fns';
