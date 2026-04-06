@@ -2,8 +2,9 @@ import { useMemo } from 'react';
 import { Card } from '../components/ui/Card';
 import { useTransactionStore } from '../store/useTransactionStore';
 import { formatCurrency } from '../utils/helpers';
-import { AlertTriangle, Zap, CalendarDays, BrainCircuit, Sparkles, PieChart } from 'lucide-react';
+import { AlertTriangle, Zap, CalendarDays, BrainCircuit, Sparkles, PieChart, TrendingUp } from 'lucide-react';
 import { CategoryChart } from '../components/charts/CategoryChart';
+import { IncomeExpenseChart } from '../components/charts/IncomeExpenseChart';
 import { format, parseISO } from 'date-fns';
 
 export function Insights() {
@@ -156,6 +157,17 @@ export function Insights() {
              </div>
               
            </div>
+        </Card>
+
+        {/* Income vs Expense Flow (Mobile Level: 4 | Desktop Level: 4) */}
+        <Card className="order-4 lg:col-span-2 flex flex-col items-start border border-finance-border/60 hover:border-finance-border transition-colors w-full min-h-[400px]">
+          <div className="flex items-center gap-2 mb-6 w-full">
+            <TrendingUp size={20} className="text-finance-textMuted" />
+            <h3 className="font-semibold text-lg flex-1">Income vs Expense Tracking</h3>
+          </div>
+          <div className="flex-1 w-full overflow-hidden">
+            <IncomeExpenseChart />
+          </div>
         </Card>
 
       </div>

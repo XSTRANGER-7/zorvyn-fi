@@ -1,6 +1,23 @@
 import type { Transaction } from '../types/types';
 
 export const INITIAL_TRANSACTIONS: Transaction[] = [
+  // Jan 2026
+  { id: 'tj1',  date: '2026-01-01T10:00:00Z', amount: 15000, category: 'Salary', type: 'income', description: 'Tech Corp Inc.' },
+  { id: 'tj2',  date: '2026-01-05T12:30:00Z', amount: 900, category: 'Groceries', type: 'expense', description: 'Whole Foods' },
+  { id: 'tj3',  date: '2026-01-12T18:45:00Z', amount: 650, category: 'Entertainment', type: 'expense', description: 'Concert Tickets' },
+  { id: 'tj4',  date: '2026-01-15T09:15:00Z', amount: 1200, category: 'Utilities', type: 'expense', description: 'Internet & Power' },
+  { id: 'tj5',  date: '2026-01-20T11:20:00Z', amount: 2000, category: 'Freelance', type: 'income', description: 'Upwork Client' },
+  { id: 'tj6',  date: '2026-01-28T14:10:00Z', amount: 1500, category: 'Shopping', type: 'expense', description: 'Clothing' },
+  
+  // Feb 2026
+  { id: 'tf1',  date: '2026-02-01T10:00:00Z', amount: 15000, category: 'Salary', type: 'income', description: 'Tech Corp Inc.' },
+  { id: 'tf2',  date: '2026-02-04T12:30:00Z', amount: 1100, category: 'Groceries', type: 'expense', description: 'Trader Joe\'s' },
+  { id: 'tf3',  date: '2026-02-10T18:45:00Z', amount: 300, category: 'Dining', type: 'expense', description: 'Restaurant' },
+  { id: 'tf4',  date: '2026-02-14T09:15:00Z', amount: 800, category: 'Entertainment', type: 'expense', description: 'Valentine\'s Day' },
+  { id: 'tf5',  date: '2026-02-20T11:20:00Z', amount: 2500, category: 'Investments', type: 'expense', description: 'Index Funds' },
+  { id: 'tf6',  date: '2026-02-25T14:10:00Z', amount: 500, category: 'Transportation', type: 'expense', description: 'Fuel & Transit' },
+  
+  // Mar 2026
   { id: 't1', date: '2026-03-01T10:00:00Z', amount: 15000, category: 'Salary', type: 'income', description: 'Tech Corp Inc.' },
   { id: 't2', date: '2026-03-02T12:30:00Z', amount: 1200, category: 'Groceries', type: 'expense', description: 'Whole Foods' },
   { id: 't3', date: '2026-03-03T18:45:00Z', amount: 450, category: 'Entertainment', type: 'expense', description: 'Movie Tickets' },
@@ -14,6 +31,8 @@ export const INITIAL_TRANSACTIONS: Transaction[] = [
   { id: 't11', date: '2026-03-22T09:00:00Z', amount: 2500, category: 'Freelance', type: 'income', description: 'Consulting' },
   { id: 't12', date: '2026-03-25T13:45:00Z', amount: 900, category: 'Dining', type: 'expense', description: 'Lunch Meeting' },
   { id: 't13', date: '2026-03-28T16:20:00Z', amount: 400, category: 'Transportation', type: 'expense', description: 'Uber' },
+  
+  // Apr 2026
   { id: 't14', date: '2026-04-01T10:00:00Z', amount: 15000, category: 'Salary', type: 'income', description: 'Tech Corp Inc.' },
   { id: 't15', date: '2026-04-02T11:30:00Z', amount: 1500, category: 'Groceries', type: 'expense', description: 'Whole Foods' },
 ];

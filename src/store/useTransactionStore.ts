@@ -47,7 +47,7 @@ export const useTransactionStore = create<TransactionState>()(
       }
     }),
     {
-      name: 'transactions-storage', // name of the item in the storage (must be unique)
+      name: 'transactions-storage-v3', // bumped to v3 to invalidate v2 cache dates
     }
   )
 );
