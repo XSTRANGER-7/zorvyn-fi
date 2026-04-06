@@ -64,12 +64,12 @@ export function Insights() {
     <div className="max-w-6xl mx-auto w-full animate-in fade-in duration-500 flex flex-col gap-8">
       <header>
         <div className="flex items-center gap-3 mb-2">
-          <div className="p-2 bg-finance-accent/20 rounded-lg">
+          {/* <div className="p-2 bg-finance-accent/20 rounded-lg">
             <BrainCircuit size={28} className="text-finance-accent animate-pulse" />
-          </div>
+          </div> */}
            <h1 className="text-3xl font-bold">Insights</h1>
         </div>
-        <p className="text-finance-textMuted sm:text-lg">Intelligent deep-dives and dynamic breakdown of your financial footprint.</p>
+        {/* <p className="text-finance-textMuted sm:text-lg">Intelligent deep-dives and dynamic breakdown of your financial footprint.</p> */}
       </header>
 
       {/* Main Grid Layout to handle strict mobile/desktop re-ordering */}

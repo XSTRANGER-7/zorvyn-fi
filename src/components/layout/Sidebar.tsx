@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom';
-import { LayoutDashboard, ReceiptText, LineChart, UserCircle, ShieldCheck, ShieldAlert, KeyRound } from 'lucide-react';
+import { LayoutDashboard, ReceiptText, LineChart, UserCircle, ShieldCheck, ShieldAlert, KeyRound, Grid } from 'lucide-react';
 import { cn } from '../../utils/helpers';
 import { useAuthStore } from '../../store/useAuthStore';
 import { Button } from '../ui/Button';
@@ -11,6 +11,7 @@ export function Sidebar() {
     { to: '/', icon: LayoutDashboard, label: 'Dashboard' },
     { to: '/transactions', icon: ReceiptText, label: 'Transactions' },
     { to: '/insights', icon: LineChart, label: 'Insights' },
+    { to: '/services', icon: Grid, label: 'Services' },
   ];
 
   return (

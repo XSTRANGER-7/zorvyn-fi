@@ -3,6 +3,7 @@ import { DashboardLayout } from '../components/layout/DashboardLayout';
 import { Dashboard } from '../pages/Dashboard';
 import { Transactions } from '../pages/Transactions';
 import { Insights } from '../pages/Insights';
+import { Services } from '../pages/Services';
 import { DebugApi } from '../pages/DebugApi';
 
 export function AppRoutes() {
@@ -15,6 +16,7 @@ export function AppRoutes() {
         <Route index element={<Dashboard />} />
         <Route path="transactions" element={<Transactions />} />
         <Route path="insights" element={<Insights />} />
+        <Route path="services" element={<Services />} />
       </Route>
     </Routes>
   );
